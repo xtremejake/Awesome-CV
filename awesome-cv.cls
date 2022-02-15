@@ -161,7 +161,7 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\setfontfamily\FA[Path=\@fontdir]{FontAwesome}
+% \setfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
@@ -255,13 +255,15 @@
 \def\@photoalign{left}
 
 % Define writer's name
-% Usage: \name{<firstname>}{<lastname>}
+% Usage: \name{<firstname>}{<lastname>}{<cred>}
 % Usage: \firstname{<firstname>}
 % Usage: \lastname{<lastname>}
+% Usage: \title{<cred>}
 % Usage: \familyname{<familyname>}
-\newcommand*{\name}[2]{\def\@firstname{#1}\def\@lastname{#2}}
+\newcommand*{\name}[3]{\def\@firstname{#1}\def\@lastname{#2}\def\@cred{#3}}
 \newcommand*{\firstname}[1]{\def\@firstname{#1}}
 \newcommand*{\lastname}[1]{\def\@lastname{#1}}
+\newcommand*{\cred}[1]{\def\@cred{#1}}
 \newcommand*{\familyname}[1]{\def\@lastname{#1}}
 \def\@familyname{\@lastname}
 
